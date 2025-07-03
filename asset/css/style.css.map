@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACGA,AAEQ,gBAFQ,CACZ,IAAI,CACA,SAAS,CAAC;EACN,SAAS,EAAE,gBAAgB,CAAC,aAAa;CAC5C;;AAJT,AAKQ,gBALQ,CACZ,IAAI,CAIA,YAAY,CAAC;EACT,SAAS,EAAE,iBAAiB,CAAC,cAAc;CAC9C;;AAPT,AAQQ,gBARQ,CACZ,IAAI,CAOA,SAAS,CAAC;EACN,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "style.scss",
+        "_animation.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

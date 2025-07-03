@@ -1,0 +1,71 @@
+// Menu button on mobile
+// .icon-btn {
+//     width: 35px;
+//     height: 35px;
+//     cursor: pointer;
+//     background-color: yellow !important;
+
+//     div {
+//         width: 35px;
+//         height: 20px;
+//         transform: translateY(-50%);
+//         position: relative;
+//     }
+//         span.icon-top,
+//         span.icon-mid,
+//         span.icon-bottom
+//         {
+//         display: inline-block;
+//         width: 35px;
+//         height: 2px;
+//         margin: 5px;
+//         background-color: $red-color;
+
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         transition: all .5s;
+//     }
+
+//     span.icon-mid {
+//         top: 50%;
+//         transition: all .3s;
+//     }
+//     span.icon-bottom {
+//         top: 100%;
+//     }
+// }
+
+.icon-btn {
+    background-color: yellow;
+
+    // div {
+    //     // transform: translateY(-50%);
+    //     position: relative;
+
+    //     span.icon-top,
+    //     span.icon-mid,
+    //     span.icon-bottom
+    //     {
+    //         display: inline-block;
+    //         width: 35px;
+    //         height: 2px;
+    //         margin: 5px;
+    //         background-color: red;
+
+    //         position: absolute;
+    //         left: 0;
+    //         top: 0;
+    //         transition: all .5s;
+    //     }
+
+    //     span.icon-mid {
+    //         top: 50%;
+    //         transition: all .3s;
+    //     }
+    //     span.icon-bottom {
+    //         top: 100%;
+    //     }
+
+    // }
+}

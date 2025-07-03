@@ -1,0 +1,17 @@
+
+
+// Menu button on moble view
+.icon-btn-active {
+    span {
+        .icon-top {
+            transform: translateY(10px) rotate(45deg);
+        }
+        .icon-bottom {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+        .icon-mid {
+            scale: 0.8;
+            opacity: 0;
+        }
+    }
+}
