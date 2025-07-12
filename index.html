@@ -8,36 +8,32 @@
     <link rel="stylesheet" href="./asset/theme/font.css">
     <link rel="stylesheet" href="./asset/css/style.css">
 
+    <!-- Tailwindcss CDN -->
+    <script src="./asset/plugin/tailwindcss/tailwindcss.min.js"></script>
+    <!-- Tailwindcss Config -->
+    <script src="./asset//plugin/tailwindcss/tailwindcss.config.js"></script>
     <style>
-        /* Custom stripe background */
-        .stripes::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: repeating-linear-gradient(315deg,
-                    #ffffff15 0,
-                    #ffffff15 1px,
-                    transparent 0,
-                    transparent 14px);
-            z-index: -1;
-            pointer-events: none;
+        span.cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.4rem;
+            background-color: oklch(90.5% 0.182 98.111);
+            animation: blink 1s step-end infinite;
+            margin-left: 2px;
+            transform: translateY(25%);
         }
 
-        ._img-stripes,
-        ._btn-stripes {
-            background-image: repeating-linear-gradient(315deg,
-                    #ffffff15 0,
-                    #ffffff15 1px,
-                    transparent 0,
-                    transparent 14px);
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
         }
     </style>
-
 </head>
 
 <body class="bg-[#030713]">
     <!-- Nav Start -->
-    <nav class="w-full h-16 bg-gray-950 fixed top-0 left-0 z-10 shadow-md border-b border-sky-300/50">
+    <nav class="w-full h-16 bg-gray-950 fixed top-0 left-0 z-10 shadow-md border-b border-sky-300/30">
         <div class="h-full container mx-auto flex justify-between items-center">
             <a href="#" class="w-fit">
                 <h1 class="font-bold text-start text-red">
@@ -81,43 +77,51 @@
     <!-- Nav End -->
     <main>
         <!-- BANNER SECTION START -->
-        <section class="h-[90vh] relative mt-16 border-b border-sky-300/50 stripes">
-            <div class="container mx-auto border border-sky-300/50 bg-[#030713]">
-                <div class="h-[82vh] flex justify-center items-center flex-wrap gap-4">
+        <section class="h-[90vh] relative mt-16 border-b border-sky-300/30 stripes" id="home">
+            <div
+                class="h-full container mx-auto md:border-x md:border-sky-300/30 bg-[#030713] flex flex-col justify-center items-center">
+                <div class="w-full flex flex-col justify-center items-center gap-4 grow">
                     <!-- Profile Start -->
-                    <div class="w-40 h-40 border border-sky-400/50 bg-gray-900 overflow-hidden _img-stripes"
+                    <div class="w-40 h-40 border border-dashed border-sky-400/50 bg-gray-900 _element-stripes"
                         aria-label="Profile">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#ffffff30">
-                            <path
-                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
-                        </svg> -->
-                        <img src="./asset/images/profile-1.jpg" alt="Profile Image" width="100%" height="100%"
-                            class="object-cover object-center" />
+                        <span class="w-full h-full inline-block relative">
+                            <img src="./asset/images/profile-1.jpg" alt="Profile Image" width="100%" height="100%"
+                                class="object-cover object-center" />
+
+                            <svg width="5" height="5" viewBox="0 0 5 5"
+                                class="absolute top-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                            </svg>
+                            <svg width="5" height="5" viewBox="0 0 5 5"
+                                class="absolute top-[-2px] right-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                            </svg>
+                            <svg width="5" height="5" viewBox="0 0 5 5"
+                                class="absolute bottom-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                            </svg>
+                            <svg width="5" height="5" viewBox="0 0 5 5"
+                                class="absolute right-[-2px] bottom-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                            </svg>
+                        </span>
                     </div>
                     <!-- Profile End -->
-                    <div class="max-w-lg text-white">
+                    <div class="w-md max-w-full md:max-w-md text-gray-400">
                         <!-- Code View Start -->
-                        <div class="bg-gray-800 p-3 flex gap-1 items-center text-sm border-b border-gray-700">
+                        <div class="w-full bg-gray-800 p-3 flex gap-1 items-center text-sm border-b border-gray-700">
                             <span class="p-2 rounded-full bg-red"></span>
                             <span class="p-2 rounded-full bg-yellow-400"></span>
                             <span class="p-2 rounded-full bg-green-400"></span>
                         </div>
 
-                        <div class="flex-1 overflow-auto bg-gray-900 p-4 font-mono text-lg leading-relaxed">
-                            <pre class="whitespace-pre-wrap">
-<span class="text-yellow-400">Hello, world!</span>
-<!-- <span class="text-gray-400">/*
-*<span class="text-yellow-400">@nickname</span> = 'Zembi'
-*/</span> -->
-const <span class="text-blue-400">NAME</span> = <span class="text-green-400">"Khaing Myo Zaw"</span>;</pre>
+                        <div class="w-full flex-1 bg-gray-900 p-4 font-mono text-lg leading-relaxed">
+                            <pre class="w-full overflow-auto whitespace-pre-wrap" id="codeview"></pre>
                         </div>
                         <!-- Code View End -->
 
-
-                        <div class="w-full flex justify-between mt-3 _btn-stripes border border-white/10">
-                            <!-- <button class="px-4 py-2 bg-gray-700 border border-dashed border-gray-500">
-                                Checkout CV
-                            </button> -->
+                        <!-- Buttons Start -->
+                        <div class="w-full flex justify-between mt-3 _element-stripes border border-white/10">
                             <button class="">
                                 <span
                                     class="inline-block relative px-4 py-3 text-[.75rem]/[1.2rem] font-medium tracking-widest text-sky-800 uppercase dark:text-sky-300">
@@ -169,12 +173,148 @@ const <span class="text-blue-400">NAME</span> = <span class="text-green-400">"Kh
 
 
                         </div>
+                        <!-- Buttons End -->
 
                     </div>
                 </div>
 
                 <!-- About Me -->
-                <div class="w-full">
+                <div class="w-full shrink-0">
+                    <a href="#about"
+                        class="p-3 rounded mx-auto flex flex-col justify-center items-center text-white text-opacity-70 hover:scale-105 hover:text-opacity-100 duration-300 ease-in-out">
+                        <span>About me</span>
+                        <span class="animate-bounce">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                <polyline points="7 13 12 18 17 13"></polyline>
+                                <polyline points="7 6 12 11 17 6"></polyline>
+                            </svg>
+                        </span>
+
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- BANNER SECTION END -->
+        <!-- BANNER SECTION START -->
+        <section class="h-[90vh] relative border-b border-sky-300/30 stripes" id="about">
+            <div
+                class="h-full container mx-auto md:border-x md:border-sky-300/30 bg-[#030713] flex flex-col justify-center items-center">
+                <div class="w-full grow text-white py-6">
+                    <h1 data-title="true"
+                        class="mt-5 text-3xl text-center font-medium tracking-tight text-gray-950 dark:text-white">About
+                        me</h1>
+                    <p data-description="true"
+                        class="md:w-1/2 text-center mx-auto mt-6 text-base/7 text-gray-700 dark:text-gray-400">
+                        I began my journey in web development with over a year of hands-on experience at the junior
+                        level, primarily building Laravel-based applications. That time not only strengthened my
+                        technical skills but also sparked a deep passion for clean code, thoughtful architecture, and
+                        delivering real value through every project.
+                    </p>
+                    <p class="text-center mt-3">
+                        My name is
+                        <span class="text-yellow-400">Khaing Myo Zaw</span>
+                        and I live in
+                        <span class="text-red">Yangon</span> now.
+                    </p>
+
+                    <div class="mt-6 flex justify-center text-center">
+                        <div class="w-1/2 border-r border-white/30">
+                            <h3
+                                class="text-xl py-3 font-medium tracking-tight text-gray-950 dark:text-white border-b border-white/30">
+                                Education
+                            </h3>
+                            <!-- <span class="w-full h-4 inline-block border-t border-white/30"></span> -->
+                            <div class="p-4">
+                                <p data-description="true"
+                                    class="text-base/7 text-gray-700 dark:text-gray-400 flex justify-center items-center gap-2">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="#EF9912" stroke-width="2"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                    </svg>
+                                    <span class="text-white">Technology University - Loikaw (EC / 1st year)</span>
+                                    (dropped out since 2020)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-1/2">
+                            <h3
+                                class="text-xl py-3 font-medium tracking-tight text-gray-950 dark:text-white border-b border-white/30">
+                                Classes and Resources
+                            </h3>
+                            <!-- <span class="w-full h-4 inline-block border-t border-white/30"></span> -->
+                            <div class="p-4 text-start text-blue-400">
+                                <ul class="list-disc px-3">
+                                    <li>
+                                        <a href="https://fairway-main-v5kqlh.laravel.cloud/" target="_blank">
+                                            "Professional web developer" at Fairway Technology
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.tutorialspoint.com/" target="_blank">
+                                            Tutorials point
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.laravel.com/" target="_blank">
+                                            Laravel
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://laravel-news.com/" target="_blank">
+                                            Laravel News
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://medium.com/" target="_blank">
+                                            Medium
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://laracasts.com/" target="_blank">
+                                            Laracasts
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/@Laratips" target="_blank">
+                                            Laratips (youtube)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/@ProgramWithGio" target="_blank">
+                                            Program With Gio (youtube)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/@yelocode" target="_blank">
+                                            Yelo Code (youtube)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/@KevinPowell" target="_blank">
+                                            Kevin Powell (youtube)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/@lundeveloper" target="_blank">
+                                            Lun Dev Code (youtube)
+                                        </a>
+                                    </li>
+                                    <li class="text-gray-700 dark:text-gray-400">
+                                        and other resources.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- About Me -->
+                <div class="w-full shrink-0">
                     <button
                         class="p-3 rounded mx-auto flex flex-col justify-center items-center text-white text-opacity-70 hover:scale-105 hover:text-opacity-100 duration-300 ease-in-out">
                         <span>About me</span>
@@ -191,9 +331,6 @@ const <span class="text-blue-400">NAME</span> = <span class="text-green-400">"Kh
             </div>
         </section>
         <!-- BANNER SECTION END -->
-        <!-- BANNER SECTION START -->
-         
-        <!-- BANNER SECTION END -->
     </main>
     <footer>
 
@@ -201,11 +338,6 @@ const <span class="text-blue-400">NAME</span> = <span class="text-green-400">"Kh
 
     <!-- jQuery -->
     <script src="./asset/plugin/jquery/jquery.min.js"></script>
-
-    <!-- Tailwindcss CDN -->
-    <script src="./asset/plugin/tailwindcss/tailwindcss.min.js"></script>
-    <!-- Tailwindcss Config -->
-    <script src="./asset//plugin/tailwindcss/tailwindcss.config.js"></script>
 
     <!-- Animation Js -->
     <script src="./asset/js/app.js"></script>

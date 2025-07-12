@@ -27,4 +27,17 @@
 .icon-btn-active span .icon-mid {
   scale: 0.8;
   opacity: 0;
+}
+
+.stripes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(315deg, rgba(255, 255, 255, 0.0823529412) 0, rgba(255, 255, 255, 0.0823529412) 1px, transparent 0, transparent 14px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+._element-stripes {
+  background-image: repeating-linear-gradient(315deg, rgba(255, 255, 255, 0.0823529412) 0, rgba(255, 255, 255, 0.0823529412) 1px, transparent 0, transparent 14px);
 }/*# sourceMappingURL=style.css.map */
