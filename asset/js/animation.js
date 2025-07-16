@@ -21,7 +21,7 @@ $(document).ready(function () {
                 span.append(text.charAt(index));
                 index++;
                 // recurrsive this function according to text's length
-                setTimeout(startTyping, 100);
+                setTimeout(startTyping, 80);
             } else {
                 if (callback) {
                     cursor.remove();
@@ -43,7 +43,19 @@ $(document).ready(function () {
                             typeEffect('name ', 'text-yellow-300', () => {
                                 typeEffect('= ', '', () => {
                                     typeEffect('"Khaing Myo Zaw"', 'text-green-400', () => {
-                                        typeEffect(';', '');
+                                        typeEffect(';', '', () => {
+                                            // Second Variable
+                                            $('#codeview').append($('<br>'))
+                                            typeEffect('let ', 'text-teal-300', () => {
+                                                typeEffect('position ', 'text-yellow-300', () => {
+                                                    typeEffect('= ', '', () => {
+                                                        typeEffect('"Web Developer"', 'text-green-400', () => {
+                                                            typeEffect(';', '');
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                        });
                                     });
                                 });
                             });
