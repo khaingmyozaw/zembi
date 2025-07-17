@@ -1,0 +1,15 @@
+span.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.4rem;
+    background-color: oklch(90.5% 0.182 98.111);
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+    transform: translateY(25%);
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

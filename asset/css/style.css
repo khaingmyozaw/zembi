@@ -40,4 +40,34 @@
 
 ._element-stripes {
   background-image: repeating-linear-gradient(315deg, rgba(255, 255, 255, 0.0823529412) 0, rgba(255, 255, 255, 0.0823529412) 1px, transparent 0, transparent 14px);
+}
+
+span.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.4rem;
+  background-color: oklch(90.5% 0.182 98.111);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+  transform: translateY(25%);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.scrollbar-hide {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1882352941) transparent;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar-hide::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-hide::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  border-radius: 6px;
 }/*# sourceMappingURL=style.css.map */

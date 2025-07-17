@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scrollable Area</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .scrollbar-hide {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-4">
+
+  <div class="h-48 w-64 overflow-auto scrollbar-hide bg-white p-4 rounded shadow">
+    <div class="space-y-2">
+      <p>Line 1</p>
+      <p>Line 2</p>
+      <p>Line 3</p>
+      <p>Line 4</p>
+      <p>Line 5</p>
+      <p>Line 6</p>
+      <p>Line 7</p>
+      <p>Line 8</p>
+      <p>Line 9</p>
+      <p>Line 10</p>
+    </div>
+  </div>
+
+</body>
+</html>
