@@ -33,20 +33,20 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(315deg, rgba(255, 255, 255, 0.0823529412) 0, rgba(255, 255, 255, 0.0823529412) 1px, transparent 0, transparent 14px);
+  background-image: repeating-linear-gradient(315deg, rgba(125, 211, 252, 0.1) 0, rgba(125, 211, 252, 0.1) 1px, transparent 0, transparent 14px);
   z-index: -1;
   pointer-events: none;
 }
 
 ._element-stripes {
-  background-image: repeating-linear-gradient(315deg, rgba(255, 255, 255, 0.0823529412) 0, rgba(255, 255, 255, 0.0823529412) 1px, transparent 0, transparent 14px);
+  background-image: repeating-linear-gradient(315deg, rgba(125, 211, 252, 0.1) 0, rgba(125, 211, 252, 0.1) 1px, transparent 0, transparent 14px);
 }
 
 span.cursor {
   display: inline-block;
   width: 2px;
   height: 1.4rem;
-  background-color: oklch(90.5% 0.182 98.111);
+  background-color: oklch(90.5% 0.182 98.111deg);
   animation: blink 1s step-end infinite;
   margin-left: 2px;
   transform: translateY(25%);

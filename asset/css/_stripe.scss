@@ -3,8 +3,8 @@
     position: absolute;
     inset: 0;
     background-image: repeating-linear-gradient(315deg,
-            #ffffff15 0,
-            #ffffff15 1px,
+            rgb(125 211 252 / 0.1) 0,
+            rgb(125 211 252 / 0.1) 1px,
             transparent 0,
             transparent 14px);
     z-index: -1;
@@ -13,8 +13,8 @@
 
 ._element-stripes {
     background-image: repeating-linear-gradient(315deg,
-            #ffffff15 0,
-            #ffffff15 1px,
+            rgb(125 211 252 / 0.1) 0,
+            rgb(125 211 252 / 0.1) 1px,
             transparent 0,
             transparent 14px);
 }
