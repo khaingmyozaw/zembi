@@ -51,8 +51,8 @@ container.addEventListener('mousemove', (event) => {
             ctx.strokeStyle = dot.color;
             ctx.lineWidth = 1;
 
-            ctx.drawImage(image, (dot.x - (dot.imageWidth / 2)), (dot.y - (dot.imageWidth / 2)), dot.imageWidth, dot.imageWidth);
             ctx.beginPath();
+            ctx.drawImage(image, (dot.x - (dot.imageWidth / 2)), (dot.y - (dot.imageWidth / 2)), dot.imageWidth, dot.imageWidth);
             ctx.moveTo(dot.x, dot.y);
             ctx.lineTo(pointer.x, pointer.y);
             ctx.stroke();

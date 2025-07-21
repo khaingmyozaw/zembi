@@ -1,6 +1,6 @@
-function copyEmail(element) {
+function copyEmail(element, data) {
+    let text = data.trim();
     
-    let text = $(element).text().trim();
     $(element).empty().text('copied');
     
     navigator.clipboard.writeText(text);
