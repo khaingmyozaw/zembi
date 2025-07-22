@@ -16,47 +16,42 @@
 
 <body class="bg-gray-300 bg-gray-300 dark:bg-[#030713]">
     <!-- Nav Start -->
-    <nav class="w-full h-16 bg-gray-200 dark:bg-gray-950 fixed top-0 left-0 z-20 shadow-md border-b border-sky-300/30">
+    <nav class="w-full h-16 bg-gray-200 dark:bg-gray-950 fixed top-0 left-0 z-30 shadow-md border-b border-sky-300/30">
         <div class="h-full container px-6 mx-auto flex justify-between items-center">
-            <a href="#" class="w-fit">
+            <a href="#home" class="w-fit">
                 <h1 class="font-bold text-start text-red">
                     ZEMBI
                 </h1>
             </a>
-            <div class="max-w-1/2 h-full relative text-black dark:text-white">
-                <!-- Menus on large screen -->
-                <ul class="w-fit h-full hidden lg:flex lg:justify-between lg:items-center lg:gap-4 " aria-label="menu">
-                    <li class="">
-                        <a href="#" class="p-3 border-red origin-center ease-in-out hover:border-b-2">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="p-3 border-red origin-center ease-in-out hover:border-b-2">
-                            Experience
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="p-3 border-red origin-center ease-in-out hover:border-b-2">
-                            Contact me
-                        </a>
-                    </li>
+
+            <div class="relative text-black dark:text-white w-full lg:w-auto">
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex gap-4 items-center">
+                    <li><a href="#about" class="p-3 hover:border-b-2 border-red">About</a></li>
+                    <li><a href="#experience" class="p-3 hover:border-b-2 border-red">Experience</a></li>
+                    <li><a href="#contact" class="p-3 hover:border-b-2 border-red">Contact me</a></li>
                 </ul>
 
-                <button
-                    class="w-11 h-10 absolute end-0 top-1/2 -translate-y-1/2 p-2 rounded-md inline-block cursor-pointer lg:hidden hover:border border-white border-opacity-40 focus:border"
-                    aria-label="menu button" id="menu-btn">
-                    <div class="w-full h-full relative lg:hidden">
-                        <div class="w-full h-0.5 rounded-md bg-red absolute top-0 start-0"></div>
-                        <div class="w-full h-0.5 rounded-md bg-red absolute start-0 top-1/2 -translate-y-1/2">
-                        </div>
-                        <div class="w-full h-0.5 rounded-md bg-red absolute bottom-0 start-0"></div>
+                <!-- Hamburger Button -->
+                <button id="menu-btn"
+                    class="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 p-2 rounded-md hover:border border-white/40 z-50">
+                    <div class="w-full h-full relative">
+                        <div class="w-full h-0.5 bg-red absolute top-0"></div>
+                        <div class="w-full h-0.5 bg-red absolute top-1/2 -translate-y-1/2"></div>
+                        <div class="w-full h-0.5 bg-red absolute bottom-0"></div>
                     </div>
                 </button>
             </div>
         </div>
 
     </nav>
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu"
+        class="fixed top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-5/6 mt-1 text-gray-950 dark:text-white bg-sky-600/30 dark:bg-sky-300/10 border border-sky-300/20 rounded-2xl flex items-center justify-around px-4 py-6 transition-all duration-300 lg:hidden z-20 backdrop-blur-md">
+        <li><a href="#about" class="py-3 px-4 hover:border-b-2 rounded-2xl backdrop-blur-xs transition-all duration-200 hover:bg-sky-600/30 dark:hover:bg-sky-300/10 hover:border border-sky-300/10">About</a></li>
+        <li><a href="#experience" class="py-3 px-4 hover:border-b-2 rounded-2xl backdrop-blur-xs transition-all duration-200 hover:bg-sky-600/30 dark:hover:bg-sky-300/10 hover:border border-sky-600/10 dark:border-sky-300/10">Experience</a></li>
+        <li><a href="#contact" class="py-3 px-4 hover:border-b-2 rounded-2xl backdrop-blur-xs transition-all duration-200 hover:bg-sky-600/30 dark:hover:bg-sky-300/10 hover:border border-sky-600/10 dark:border-sky-300/10">Contact me</a></li>
+    </ul>
     <!-- Nav End -->
     <main class="w-full h-full relative">
         <div
@@ -233,7 +228,7 @@
                     </div>
                     <div class="w-full">
                         <div
-                            class="relative mx-auto w-fit p-1 rounded text-gray-700 dark:text-gray-400 flex justify-center items-center gap-2 bg-gray-950/10 dark:bg-white/10 border border-gray-950/10 dark:border-white/10">
+                            class="relative mx-auto w-fit p-1 rounded text-gray-700 dark:text-gray-400 flex justify-center items-center gap-2 bg-gray-950/10 dark:bg-white/10 border border-gray-950/10 dark:border-white/10 backdrop-blur-sm">
                             <a href="mailTo: kmyozaw.dev@gmail.com"
                                 class="text-base hover:text-gray-950 dark:hover:text-white transition-all duration-300 email">
                                 kmyozaw.dev@gmail.com
@@ -639,7 +634,7 @@
 
                 <div class="w-full">
                     <div
-                        class="mb-5 relative mx-auto w-fit p-1 rounded text-gray-700 dark:text-gray-400 flex justify-center items-center gap-2 bg-gray-950/10 dark:bg-white/10 border border-gray-950/10 dark:border-white/10">
+                        class="mb-5 relative mx-auto w-fit p-1 rounded text-gray-700 dark:text-gray-400 flex justify-center items-center gap-2 bg-gray-950/10 dark:bg-white/10 border border-gray-950/10 dark:border-white/10 backdrop-blur-sm">
                         <a href="mailTo: kmyozaw.dev@gmail.com"
                             class="text-base hover:text-gray-950 dark:hover:text-white transition-all duration-300 email">
                             kmyozaw.dev@gmail.com

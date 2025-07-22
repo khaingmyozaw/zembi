@@ -1,17 +1,17 @@
 #menu-btn>div div {
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 #menu-btn>div.active div:nth-child(1),
 #menu-btn>div.active div:nth-child(3) {
     // top: 50%;
-    transform: translate(15%, 50%) rotate(45deg);
-    transition: .4s ease-in-out;
+    transform: translate(15%, 115%) rotate(45deg);
+    transition: .2s ease-in-out;
     transform-origin: left;
 }
 
 #menu-btn>div.active div:nth-child(3) {
-    transform: translate(15%, -50%) rotate(-45deg);
+    transform: translate(15%, -115%) rotate(-45deg);
 }
 
 #menu-btn>div.active div:nth-child(2) {

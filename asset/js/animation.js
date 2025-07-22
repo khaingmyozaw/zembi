@@ -1,6 +1,12 @@
 $(document).ready(function () {
-    $('#menu-btn').on('click', function () {
-        $(this).find('div').toggleClass('active');
+
+    const showMenu = () => {
+        $('#mobile-menu').toggleClass('translate-y-16 -translate-y-1/2')
+        $('#menu-btn div').toggleClass('active');
+    }
+
+    $('#menu-btn, #mobile-menu a').on('click', function () {
+        showMenu();
     });
 
     const cons = 'console.';
