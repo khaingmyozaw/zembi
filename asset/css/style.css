@@ -18,6 +18,10 @@
   transition: 0.1s ease-in-out;
 }
 
+#mobile-menu {
+  background: linear-gradient(135deg, rgba(125, 211, 252, 0.2), transparent, rgba(125, 211, 252, 0.2));
+}
+
 .icon-btn-active span .icon-top {
   transform: translateY(10px) rotate(45deg);
 }
