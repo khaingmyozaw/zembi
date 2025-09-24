@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zembi</title>
+    <link rel="stylesheet" href="./asset/theme/font.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+
+    <!-- Tailwindcss CDN -->
+    <script src="./asset/plugin/tailwindcss/tailwindcss.min.js"></script>
+    <!-- Tailwindcss Config -->
+    <script src="./asset//plugin/tailwindcss/tailwindcss.config.js"></script>
+</head>
+
+<body class="bg-gray-300 bg-gray-300 dark:bg-[#030713]">
+    <!-- Nav Start -->
+    <nav class="w-full h-16 bg-gray-200 dark:bg-gray-950 fixed top-0 left-0 z-30 shadow-md border-b border-sky-300/30">
+        <div class="h-full container px-6 mx-auto flex justify-between items-center">
+            <a href="#home" class="w-fit">
+                <h1 class="font-bold text-start text-red">
+                    ZEMBI
+                </h1>
+            </a>
+
+            <div class="relative text-black dark:text-white w-full lg:w-auto flex justify-end">
+                <!-- Theme Button -->
+                <button
+                    class="w-9 h-9 p-2 me-12 lg:me-2 rounded-md hover:bg-black/10 hover:dark:bg-white/10 transition-all duration-200 group"
+                    onclick="toggleTheme($(this))">
+                    <img src="./asset/images/svgs/moon.svg" alt="theme icon" width="100" height="100"
+                        class="object-center object-cover opacity-70 group-hover:opacity-100">
+                </button>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex gap-4 items-center">
+                    <li><a href="#about" class="p-3 hover:border-b-2 border-red">About</a></li>
+                    <li><a href="#experience" class="p-3 hover:border-b-2 border-red">Experience</a></li>
+                    <li><a href="#contact" class="p-3 hover:border-b-2 border-red">Contact me</a></li>
+                </ul>
+
+
+                <!-- Hamburger Button -->
+                <button id="menu-btn"
+                    class="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 p-2 rounded-md hover:border border-white/40 z-50">
+                    <div class="w-full h-full relative">
+                        <div class="w-full h-0.5 bg-red absolute top-0"></div>
+                        <div class="w-full h-0.5 bg-red absolute top-1/2 -translate-y-1/2"></div>
+                        <div class="w-full h-0.5 bg-red absolute bottom-0"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu"
+        class="fixed top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-5/6 mt-1 text-gray-950 dark:text-white border border-sky-300/20 rounded-2xl flex items-center justify-around px-4 py-6 transition-all duration-300 lg:hidden z-20 backdrop-blur-sm">
+        <li><a href="#about"
+                class="py-3 px-4 hover:border-b-2 rounded-2xl backdrop-blur-xs transition-all duration-200 hover:bg-sky-600/30 dark:hover:bg-sky-300/10 hover:border border-sky-300/10">About</a>
+        </li>
+        <li><a href="#experience"
+                class="py-3 px-4 hover:border-b-2 rounded-2xl backdrop-blur-xs transition-all duration-200 hover:bg-sky-600/30 dark:hover:bg-sky-300/10 hover:border border-sky-600/10 dark:border-sky-300/10">Experience</a>
+        </li>
+        <li><a href="#contact"
+                class="py-3 px-4 hover:border-b-2 rounded-2xl backdrop-blur-xs transition-all duration-200 hover:bg-sky-600/30 dark:hover:bg-sky-300/10 hover:border border-sky-600/10 dark:border-sky-300/10">Contact
+                me</a></li>
+    </ul>
+    <!-- Nav End -->
+    <main class="w-full h-full relative">
+        <div
+            class="w-full py-2 absolute top-0 z-10 text-center text-black dark:text-white/70 bg-sky-300/50 dark:bg-sky-300/10">
+            Currently job opened.
+        </div>
+
+        <!-- BANNER SECTION START -->
+        <section class="h-[90vh] relative mt-16 border-b border-sky-600 dark:border-sky-300/30 stripes" id="home">
+            <div
+                class="h-full container mx-auto md:border-x md:border-sky-300/30 bg-gray-200 dark:bg-[#030713] flex flex-col justify-center items-center">
+
+                <div class="w-full flex flex-col justify-center items-center gap-4 grow">
+                    <!-- Profile Start -->
+                    <div class="w-40 h-40 border border-dashed border-sky-400/50 bg-gray-900 _element-stripes"
+                        aria-label="Profile">
+                        <span class="w-full h-full inline-block relative">
+                            <img src="./asset/images/profile-1.jpg" alt="Profile Image" width="100%" height="100%"
+                                class="object-cover object-center" />
+
+                            <svg width="5" height="5" viewBox="0 0 5 5"
+                                class="absolute top-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                            </svg>
+                            <svg width="5" height="5" viewBox="0 0 5 5"
+                                class="absolute top-[-2px] right-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                            </svg>
+                            <svg width="5" height="5" viewBox="0 0 5 5"
+                                class="absolute bottom-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                            </svg>
+                            <svg width="5" height="5" viewBox="0 0 5 5"
+                                class="absolute right-[-2px] bottom-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <!-- Profile End -->
+                    <div class="w-md max-w-full md:max-w-md text-gray-400">
+                        <!-- Code View Start -->
+                        <div class="w-full bg-gray-800 p-3 flex gap-1 items-center text-sm border-b border-gray-700">
+                            <span class="p-2 rounded-full bg-red"></span>
+                            <span class="p-2 rounded-full bg-yellow-400"></span>
+                            <span class="p-2 rounded-full bg-green-400"></span>
+                        </div>
+
+                        <div class="w-full flex-1 bg-gray-900 p-4 font-mono text-lg leading-relaxed">
+                            <pre class="w-full overflow-auto whitespace-pre-wrap" id="codeview"></pre>
+                        </div>
+                        <!-- Code View End -->
+
+                        <!-- Buttons Start -->
+                        <div class="w-full flex justify-between mt-3 _element-stripes border border-white/10  z-40">
+                            <a target="_blank" href="./asset/files/khaingmyozaw-updated-cv.pdf" class="group">
+                                <span
+                                    class="inline-block relative px-4 py-3 text-[.75rem]/[1.2rem] font-medium tracking-widest text-sky-800 uppercase dark:text-sky-300 group-hover:text-black group-hover:dark:text-sky-300">
+                                    <span
+                                        class="absolute inset-0 border border-dashed border-sky-300/60 bg-sky-800/20 dark:bg-sky-400/10 dark:border-sky-300/30 group-hover:bg-sky-800/30 group-hover:dark:bg-sky-400/15 transition-all duration-200"></span>
+                                    Checkout CV
+                                    <svg width="5" height="5" viewBox="0 0 5 5"
+                                        class="absolute top-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                                    </svg>
+                                    <svg width="5" height="5" viewBox="0 0 5 5"
+                                        class="absolute top-[-2px] right-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                                    </svg>
+                                    <svg width="5" height="5" viewBox="0 0 5 5"
+                                        class="absolute bottom-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                                    </svg>
+                                    <svg width="5" height="5" viewBox="0 0 5 5"
+                                        class="absolute right-[-2px] bottom-[-2px] fill-sky-300 dark:fill-sky-300/50">
+                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a class="group" href="./asset/files/khaingmyozaw-updated-cv.pdf" download>
+                                <span
+                                    class="inline-block relative px-4 py-3 text-[.75rem]/[1.2rem] font-medium tracking-widest text-black text-green-800 uppercase dark:text-green-300">
+                                    <span
+                                        class="absolute inset-0 border border-dashed border-green-600 dark:border-green-300/60 bg-green-800/20 dark:bg-green-400/10 dark:border-green-300/30 group-hover:bg-green-800/30 group-hover:dark:bg-green-400/15 transition-all duration-200"></span>
+                                    Download CV
+                                    <svg width="5" height="5" viewBox="0 0 5 5"
+                                        class="absolute top-[-2px] left-[-2px] fill-green-300 dark:fill-green-300/50">
+                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                                    </svg>
+                                    <svg width="5" height="5" viewBox="0 0 5 5"
+                                        class="absolute top-[-2px] right-[-2px] fill-green-300 dark:fill-green-300/50">
+                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                                    </svg>
+                                    <svg width="5" height="5" viewBox="0 0 5 5"
+                                        class="absolute bottom-[-2px] left-[-2px] fill-green-300 dark:fill-green-300/50">
+                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                                    </svg>
+                                    <svg width="5" height="5" viewBox="0 0 5 5"
+                                        class="absolute right-[-2px] bottom-[-2px] fill-green-300 dark:fill-green-300/50">
+                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <!-- Buttons End -->
+                    </div>
+                </div>
+                <!-- About Me -->
+                <div class="w-full shrink-0">
+                    <a href="#about"
+                        class="p-3 rounded mx-auto flex flex-col justify-center items-center text-gray-950 dark:text-white text-opacity-70 hover:scale-105 hover:text-opacity-100 duration-300 ease-in-out">
+                        <span>About me</span>
+                        <span class="animate-bounce">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                <polyline points="7 13 12 18 17 13"></polyline>
+                                <polyline points="7 6 12 11 17 6"></polyline>
+                            </svg>
+                        </span>
+
+                    </a>
+                </div>
+
+                <!-- SPIDER EFFECT -->
+                <!-- <div class="w-full h-full mx-auto container absolute left-1/2 top-0 z-30 -translate-x-1/2 overflow-hidden"
+                    id="spider_container">
+                    <canvas id="spider" class="w-full h-full transition-all duration-300 ease-in-out"></canvas>
+                    <img src="./asset/images/svgs/spider-3.svg" alt="spider image" id="spider_image" class="hidden">
+                </div> -->
+            </div>
+        </section>
+        <!-- BANNER SECTION END -->
+        <!-- ABOUT SECTION START -->
+        <section class="relative border-b border-sky-300/30 stripes" id="about">
+            <div
+                class="h-full container text-gray-950 dark:text-white px-3 py-8 mx-auto md:border-x md:border-sky-300/30 bg-gray-200 dark:bg-[#030713]">
+                <h1 data-title="true"
+                    class="mt-5 text-3xl text-center font-medium tracking-tight text-gray-950 dark:text-white">
+                    About me
+                </h1>
+                <div
+                    class="my-4 text-xl flex flex-wrap justify-center items-center gap-3 text-gray-950 dark:text[#9CA3AF]">
+                    <div class="w-full font-bold flex justify-center items-center gap-1">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span class="text-yellow-500 dark:text-yellow-300">
+                            Khaing Myo Zaw
+                        </span>
+                    </div>
+                    <div class="flex justify-center items-center gap-1">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <span class="text-sky-500 dark:text-sky-300">
+                            Web Developer
+                        </span>
+                    </div>
+                    <div class="flex justify-center items-center gap-1">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span class="text-teal-500 dark:text-teal-300">
+                            Yangon
+                        </span>
+                    </div>
+                    <div class="w-full">
+                        <div
+                            class="relative mx-auto w-fit p-1 rounded text-gray-700 dark:text-gray-400 flex justify-center items-center gap-2 bg-gray-950/10 dark:bg-white/10 border border-gray-950/10 dark:border-white/10 backdrop-blur-sm">
+                            <a href="mailTo: kmyozaw.dev@gmail.com"
+                                class="text-base hover:text-gray-950 dark:hover:text-white transition-all duration-300 email">
+                                kmyozaw.dev@gmail.com
+                            </a>
+                            <button
+                                class="p-1 rounded hover:text-gray-800 dark:hover:text-white hover:bg-gray-950/10 dark:hover:bg-white/10 transition-all duration-300"
+                                data-email="kmyozaw.dev@gmail.com" onclick="copyEmail('.email', $(this).data('email'))">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <p data-description="true"
+                    class="lg:w-3/5 text-center mx-auto text-base/7 text-gray-700 dark:text-gray-400">
+                    I began my journey in web development with over a year of hands-on experience at the junior
+                    level, primarily building Laravel-based applications. That time not only strengthened my
+                    technical skills but also sparked a deep passion for clean code, thoughtful architecture, and
+                    delivering real value through every project.
+                </p>
+
+                <div class="mt-6 flex justify-center flex-wrap">
+                    <div class="w-full lg:w-1/2 border-r border-gray-950/30 dark:border-white/30">
+                        <h3
+                            class="text-xl p-3 font-medium tracking-tight text-gray-950 dark:text-white border-b border-gray-950/30 dark:border-white/30">
+                            Education
+                        </h3>
+                        <!-- <span class="w-full h-4 inline-block border-t border-white/30"></span> -->
+                        <div class="p-4">
+                            <p data-description="true"
+                                class="text-base/7 text-gray-700 dark:text-gray-400 flex items-center gap-2 flex-wrap">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#EF9912" stroke-width="2"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                </svg>
+                                <span class="inline-block">Technology University - Loikaw (EC / 1st
+                                    year)</span>
+                                <span>
+                                    [dropped out]
+                                </span>
+                            </p>
+                        </div>
+                        <div class="p-4">
+                            <p data-description="true"
+                                class="text-base/7 text-gray-700 dark:text-gray-400 flex items-center gap-2">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#EF9912" stroke-width="2"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                                <span>Web delevopement foundation (Data Land Technology)</span>
+                            </p>
+                        </div>
+                        <div class="p-4">
+                            <p data-description="true"
+                                class="text-base/7 text-gray-700 dark:text-gray-400 flex items-center gap-2">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="#EF9912" stroke-width="2"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                                <span>Professional web developer (Fairway Technology)</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 ">
+                        <h3
+                            class="text-xl p-3 font-medium tracking-tight text-gray-950 dark:text-white border-b border-gray-950/30 dark:border-white/30">
+                            Self study resources
+                        </h3>
+                        <div class="p-4 text-start text-sky-500 dark:text-sky-300">
+                            <ul class="list-disc px-3">
+                                <li>
+                                    <a href="https://www.tutorialspoint.com/" target="_blank">
+                                        Tutorials point
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.laravel.com/" target="_blank">
+                                        Laravel
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://laravel-news.com/" target="_blank">
+                                        Laravel News
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://medium.com/" target="_blank">
+                                        Medium
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://laracasts.com/" target="_blank">
+                                        Laracasts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@Laratips" target="_blank">
+                                        Laratips (youtube)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@ProgramWithGio" target="_blank">
+                                        Program With Gio (youtube)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@yelocode" target="_blank">
+                                        Yelo Code (youtube)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@KevinPowell" target="_blank">
+                                        Kevin Powell (youtube)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@lundeveloper" target="_blank">
+                                        Lun Dev Code (youtube)
+                                    </a>
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-400">
+                                    and other resources.
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mt-6 flex justify-center flex-wrap">
+                    <div class="w-full lg:w-1/2 border-r border-gray-950/30 dark:border-white/30">
+                        <h3
+                            class="text-xl p-3 font-medium tracking-tight text-gray-950 dark:text-white border-b border-gray-950/30 dark:border-white/30">
+                            Languages
+                        </h3>
+                        <div class="p-3 flex flex-wrap gap-3">
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/html.svg" alt="html"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/css.svg" alt="css"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/js.svg" alt="javascript"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/php.svg" alt="php"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 ">
+                        <h3
+                            class="text-xl p-3 font-medium tracking-tight text-gray-950 dark:text-white border-b border-gray-950/30 dark:border-white/30">
+                            Tools
+                        </h3>
+
+                        <div class="p-3 flex flex-wrap gap-3">
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/laravel.svg" alt="laravel"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/jquery.svg" alt="jQuery"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/bootstrap.svg" alt="bootstrap"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/tailwindcss.svg" alt="tailwindcss"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/sass.svg" alt="sass"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/git.svg" alt="git"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/mysql.svg" alt="mysql"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/mariadb.svg" alt="mariadb"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/linux.svg" alt="linux"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/vs-code.svg" alt="Vs Code"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                            <div class="w-12 h-12 p-2 overflow-hidden">
+                                <img src="./asset/images/svgs/figma.svg" alt="figma"
+                                    class="w-full h-full object-center object-contain">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT SECTION END -->
+        <!-- EXPERIENCE SECTION START -->
+        <section class="relative border-b border-sky-300/30 stripes" id="experience">
+            <div
+                class="h-full container text-gray-950 dark:text-white px-3 py-8 mx-auto md:border-x md:border-sky-300/30 bg-gray-200 dark:bg-[#030713]">
+                <h1 data-title="true"
+                    class="mt-5 text-3xl text-center font-medium tracking-tight text-gray-950 dark:text-white">
+                    Experiences
+                </h1>
+
+                <div class="w-full py-6 flex flex-wrap">
+                    <!-- Card Start -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 p-3">
+                        <div class="w-full h-max-content p-3 border border-sky-500 dark:border-sky-300/30 card">
+                            <div class="h-20 pb-2 mb-4 border-b border-white/30 card-header">
+                                <h2 class="text-xl">Content Management System (CMS)</h2>
+                                <small class="text-gray-700 dark:text-gray-400 text-sm">(7+) projects</small>
+                            </div>
+                            <div class="w-100 h-64 lg:h-72 overflow-y-auto scrollbar-hide">
+                                <h3 class="text-lg mb-2">Features:</h3>
+                                <ul class="list-disc px-4 text-gray-800 dark:text-gray-300">
+                                    <li>
+                                        Responsive UI
+                                    </li>
+                                    <li>
+                                        Page builder with image uploads, rich text editor, and SEO tools
+                                    </li>
+                                    <li>
+                                        Role-based access control for editors and admins
+                                    </li>
+                                    <li>
+                                        Custom menu and navigation manager
+                                    </li>
+                                    <li>
+                                        Multi-language support (Myanmar | English | Chinese)
+
+                                    </li>
+                                    <li>
+                                        Media gallery with reusable assets
+                                    </li>
+                                    <li>
+                                        Contact form with email alerts
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card Start -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 p-3">
+                        <div class="w-full h-max-content p-3 border border-sky-500 dark:border-sky-300/30 card">
+                            <div class="h-20 pb-2 mb-4 border-b border-white/30 card-header">
+                                <h2 class="text-xl">Service Management System (SMS)</h2>
+                                <small class="text-gray-700 dark:text-gray-400 text-sm">(3+) projects</small>
+                            </div>
+                            <div class="w-100 h-64 lg:h-72 overflow-y-auto scrollbar-hide">
+                                <h3 class="text-lg mb-2">Key Features:</h3>
+                                <ul class="list-disc px-4 text-gray-800 dark:text-gray-300">
+                                    <li>
+                                        Role-based access for admins, head, engineers, and requester
+                                    </li>
+                                    <li>
+                                        Dynamic permissions
+                                    </li>
+                                    <li>
+                                        Multi-auth System – Engineer & Head and Staff & Head
+                                    </li>
+                                    <li>
+                                        Admin dashboard with service KPIs and graphs
+                                    </li>
+                                    <li>
+                                        Service request form with file attachments and category selection
+                                    </li>
+                                    <li>
+                                        File chunking for large file uploads
+                                    </li>
+                                    <li>
+                                        Multi-language support (Myanmar | English)
+                                    </li>
+                                    <li>
+                                        Excel import and export
+                                    </li>
+                                    <li>
+                                        Service and KPI reports export (PDF/Excel)
+                                    </li>
+                                    <li>
+                                        API Integration
+                                    </li>
+                                    <li>
+                                        Clean, responsive UI using Bootstrap 5
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card Start -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 p-3">
+                        <div class="w-full h-max-content p-3 border border-sky-500 dark:border-sky-300/30 card">
+                            <div class="h-20 pb-2 mb-4 border-b border-white/30 card-header">
+                                <h2 class="text-xl">School Management System (SMS)</h2>
+                                <small class="text-gray-700 dark:text-gray-400 text-sm">(2+) projects</small>
+                            </div>
+                            <div class="w-100 h-64 lg:h-72 overflow-y-auto scrollbar-hide">
+                                <h3 class="text-lg mb-2">Features:</h3>
+                                <ul class="list-disc px-4 text-gray-800 dark:text-gray-300">
+                                    <li>
+                                        Student registration system with Bootstrap tabbed form (multi-section)
+                                    </li>
+                                    <li>
+                                        Role-based access control for Admin, Teacher, Student and Guardian
+                                    </li>
+                                    <li>
+                                        Staff Roles – Admin, Teachers, Accountants, Librarians, etc., with permissions
+                                    </li>
+                                    <li>
+                                        Subject, Class, and Timetable management
+                                    </li>
+                                    <li>
+                                        Attendance tracking with per-day/month summary
+                                    </li>
+                                    <li>
+                                        Exam result entry and report card generation
+                                    </li>
+                                    <li>
+                                        Multi-language support (Myanmar | English)
+                                    </li>
+                                    <li>
+                                        Notice board and internal messaging for communication
+                                    </li>
+                                    <li>
+                                        Subject Management – Manage subjects per grade/class
+                                    </li>
+                                    <li>
+                                        Teacher Profile Management – Subject assignments, schedule, personal details
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card Start -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 p-3">
+                        <div class="w-full h-max-content p-3 border border-sky-500 dark:border-sky-300/30 card">
+                            <div class="h-16 pb-2 mb-4 border-b border-white/30 card-header">
+                                <h2 class="text-xl">Other Projects</h2>
+                            </div>
+                            <div class="w-100 h-64 lg:h-72 overflow-y-auto scrollbar-hide">
+                                <h3 class="text-lg mb-2">Contributed For:</h3>
+                                <ul class="list-disc px-4 text-gray-800 dark:text-gray-300">
+                                    <li>
+                                        Updating queries for perfornmance issues
+                                    </li>
+                                    <li>
+                                        Reporting (in excel files)
+                                    </li>
+                                    <li>
+                                        Debugging server issues
+                                    </li>
+                                    <li>
+                                        And others...
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                </div>
+            </div>
+        </section>
+        <!-- EXPERIENCE SECTION END -->
+
+        <!-- CONTACT ME SECTION START -->
+        <section class="relative border-b border-sky-500 dark:border-sky-300/30 stripes" id="contact">
+            <div
+                class="h-full container text-gray-950 dark:text-white px-3 py-12 mx-auto md:border-x md:border-sky-300/30 bg-gray-200 dark:bg-[#030713]">
+                <h1 data-title="true"
+                    class="mb-6 text-3xl text-center font-medium tracking-tight text-gray-950 dark:text-white">
+                    Contact me
+                </h1>
+
+                <div class="w-full">
+                    <div
+                        class="mb-5 relative mx-auto w-fit p-1 rounded text-gray-700 dark:text-gray-400 flex justify-center items-center gap-2 bg-gray-950/10 dark:bg-white/10 border border-gray-950/10 dark:border-white/10 backdrop-blur-sm">
+                        <a href="mailTo: kmyozaw.dev@gmail.com"
+                            class="text-base hover:text-gray-950 dark:hover:text-white transition-all duration-300 email">
+                            kmyozaw.dev@gmail.com
+                        </a>
+                        <button
+                            class="p-1 rounded hover:text-gray-800 dark:hover:text-white hover:bg-gray-950/10 dark:hover:bg-white/10 transition-all duration-300"
+                            data-email="kmyozaw.dev@gmail.com" onclick="copyEmail('.email', $(this).data('email'))">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex justify-center items-center gap-3">
+                        <a href="https://github.com/khaingmyozaw"
+                            class="inline-block w-12 h-12 bg-black border-white/50 rounded-full flex justify-center items-center overflow-hidden opacity-90 hover:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 496 512">
+                                <path
+                                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                            </svg>
+                        </a>
+                        <a href="https://t.me/khaingmyozaw"
+                            class="inline-block w-12 h-12 bg-[#27A7E7] border border-[#27A7E7] rounded-full flex justify-center items-center overflow-hidden opacity-90 hover:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                <path fill="#ffffff"
+                                    d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+                            </svg>
+                        </a>
+                        <a href="viber://add?+959895123061/"
+                            class="inline-block w-12 h-12 p-1 bg-white border border-white rounded-full flex justify-center items-center overflow-hidden opacity-90 hover:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="#7360f2"
+                                    d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT ME SECTION END -->
+
+    </main>
+    <footer class="w-full py-4">
+        <div class="text-center text-gray-700 dark:text-gray-400">
+            Zembi @2025
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="./asset/plugin/jquery/jquery.min.js"></script>
+
+    <!-- Animation Js -->
+    <script src="./asset/js/app.js"></script>
+    <script src="./asset/js/animation.js"></script>
+    <!-- <script src="./asset/js/spider.js"></script> -->
+</body>
+
+</html>
