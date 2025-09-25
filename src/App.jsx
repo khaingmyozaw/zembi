@@ -1,12 +1,12 @@
-import Nav from "./components/Nav"
+import AlertMessage from "./components/heros/Alert"
+import Banner from "./components/heros/Banner"
+import Nav from "./components/layouts/Nav"
 
 function App() {
   return (
     <>
       <Nav />
-      <main className="bg-gray-300 dark:bg-[#030713]">
-
-      </main>
+      <Banner />
     </>
   )
 }
