@@ -85,8 +85,8 @@ const Hero = () => {
                         className="p-3 rounded mx-auto flex flex-col justify-center items-center text-gray-950 dark:text-white text-opacity-70 hover:scale-105 hover:text-opacity-100 duration-300 ease-in-out">
                         <span>About me</span>
                         <span className="animate-bounce">
-                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round" className="css-i6dzq1">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2"
+                                fill="none" strokeLinecap="round" strokeLinejoin="round" className="css-i6dzq1">
                                 <polyline points="7 13 12 18 17 13"></polyline>
                                 <polyline points="7 6 12 11 17 6"></polyline>
                             </svg>

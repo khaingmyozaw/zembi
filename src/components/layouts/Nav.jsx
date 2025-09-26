@@ -1,8 +1,13 @@
 import DesktopMenu from "../nav/DesktopMenu";
 import MobileMenu from "../nav/MobileMenu";
 import HumbuggerBtn from "../nav/HumbuggerBtn";
+import { useState } from "react";
+
 
 export default function Nav() {
+    const [isShow, setIsShow] = useState(false)
+    const toggleMenu = () => setIsShow(!isShow)
+
     return (
         <>
             <nav className="w-full h-16 bg-gray-200 dark:bg-gray-950 fixed top-0 left-0 z-30 shadow-md border-b border-sky-300/30">
@@ -18,13 +23,13 @@ export default function Nav() {
                         <DesktopMenu items={menuItems}/>
 
                         {/* Hamburger Button */}
-                        <HumbuggerBtn />
+                        <HumbuggerBtn action={toggleMenu} />
                     </div>
                 </div>
             </nav>
 
             {/* Mobile Menu */}
-            <MobileMenu items={menuItems} />
+            <MobileMenu items={menuItems} isShow={isShow} />
         </>
     )
 }
