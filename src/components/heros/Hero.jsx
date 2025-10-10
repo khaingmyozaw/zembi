@@ -1,5 +1,8 @@
 import React from 'react'
 import Profile from './Profile'
+import PreviewBtn from '../layouts/buttons/PreviewBtn';
+import DownloadBtn from '../layouts/buttons/DownloadBtn';
+import TypingSequence from '../animations/TypingSequence';
 
 const Hero = () => {
     return (
@@ -21,60 +24,15 @@ const Hero = () => {
                         </div>
 
                         <div className="w-full flex-1 bg-gray-900 p-4 font-mono text-lg leading-relaxed">
-                            <pre className="w-full overflow-auto whitespace-pre-wrap" id="codeview"></pre>
+                            {/* Typing Animation */}
+                            <TypingSequence />
                         </div>
                         {/* <!-- Code View End --> */}
 
                         {/* <!-- Buttons Start --> */}
                         <div className="w-full flex justify-between mt-3 _element-stripes border border-white/10 z-40 pointer-events-auto">
-                            <a target="_blank" href="./asset/files/khaingmyozaw-updated-cv.pdf" className="group">
-                                <span
-                                    className="inline-block relative px-4 py-3 text-[.75rem]/[1.2rem] font-medium tracking-widest text-sky-800 uppercase dark:text-sky-300 group-hover:text-black group-hover:dark:text-sky-300">
-                                    <span
-                                        className="absolute inset-0 border border-dashed border-sky-300/60 bg-sky-800/20 dark:bg-sky-400/10 dark:border-sky-300/30 group-hover:bg-sky-800/30 group-hover:dark:bg-sky-400/15 transition-all duration-200"></span>
-                                    Checkout CV
-                                    <svg width="5" height="5" viewBox="0 0 5 5"
-                                        className="absolute top-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50">
-                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
-                                    </svg>
-                                    <svg width="5" height="5" viewBox="0 0 5 5"
-                                        className="absolute top-[-2px] right-[-2px] fill-sky-300 dark:fill-sky-300/50">
-                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
-                                    </svg>
-                                    <svg width="5" height="5" viewBox="0 0 5 5"
-                                        className="absolute bottom-[-2px] left-[-2px] fill-sky-300 dark:fill-sky-300/50">
-                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
-                                    </svg>
-                                    <svg width="5" height="5" viewBox="0 0 5 5"
-                                        className="absolute right-[-2px] bottom-[-2px] fill-sky-300 dark:fill-sky-300/50">
-                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
-                                    </svg>
-                                </span>
-                            </a>
-                            <a className="group" href="./asset/files/khaingmyozaw-updated-cv.pdf" download>
-                                <span
-                                    className="inline-block relative px-4 py-3 text-[.75rem]/[1.2rem] font-medium tracking-widest text-black text-green-800 uppercase dark:text-green-300">
-                                    <span
-                                        className="absolute inset-0 border border-dashed border-green-600 dark:border-green-300/60 bg-green-800/20 dark:bg-green-400/10 dark:border-green-300/30 group-hover:bg-green-800/30 group-hover:dark:bg-green-400/15 transition-all duration-200"></span>
-                                    Download CV
-                                    <svg width="5" height="5" viewBox="0 0 5 5"
-                                        className="absolute top-[-2px] left-[-2px] fill-green-300 dark:fill-green-300/50">
-                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
-                                    </svg>
-                                    <svg width="5" height="5" viewBox="0 0 5 5"
-                                        className="absolute top-[-2px] right-[-2px] fill-green-300 dark:fill-green-300/50">
-                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
-                                    </svg>
-                                    <svg width="5" height="5" viewBox="0 0 5 5"
-                                        className="absolute bottom-[-2px] left-[-2px] fill-green-300 dark:fill-green-300/50">
-                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
-                                    </svg>
-                                    <svg width="5" height="5" viewBox="0 0 5 5"
-                                        className="absolute right-[-2px] bottom-[-2px] fill-green-300 dark:fill-green-300/50">
-                                        <path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path>
-                                    </svg>
-                                </span>
-                            </a>
+                            <PreviewBtn />
+                            <DownloadBtn />
                         </div>
                         {/* <!-- Buttons End --> */}
                     </div>
