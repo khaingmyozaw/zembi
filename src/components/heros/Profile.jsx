@@ -3,8 +3,10 @@ import profileImage from '../../asset/images/profile.webp'
 
 const Profile = () => {
     return (
-        <div className="w-40 h-40 border border-dashed border-sky-400/50 bg-gray-900 _element-stripes"
-            aria-label="Profile">
+        <div 
+            className="w-32 h-32 sm:w-34 sm:34 md:w-36 md:h-36 lg:w-40 lg:h-40 mt-24 border border-dashed border-sky-400/50 bg-gray-900 _element-stripes"
+            aria-label="Profile"
+        >
             <span className="w-full h-full inline-block relative">
                 <img src={profileImage} alt="Profile Image" width="100%" height="100%"
                     className="object-cover object-center" />

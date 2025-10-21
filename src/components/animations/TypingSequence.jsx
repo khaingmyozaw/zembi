@@ -31,7 +31,7 @@ const TypingSequence = () => {
 
                     if (index < keywordIndex) {
                         return (
-                            <span className={keyword.className}>
+                            <span key={`typing-${index}`} className={keyword.className}>
                                 {keyword.text}
                             </span>
                         )
@@ -40,6 +40,7 @@ const TypingSequence = () => {
                     if (index === keywordIndex) {
                         return (
                             <TypeEffect
+                                key={`typing-${index}`}
                                 text={keyword.text}
                                 className={keyword.className}
                                 onDone={() => setKeywordIndex(prev => prev + 1)}
